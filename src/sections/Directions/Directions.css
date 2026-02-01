@@ -1,0 +1,99 @@
+/* Directions - Alt (light gray) section */
+.directions {
+  position: relative;
+}
+
+.directions .section-title {
+  color: var(--text-primary);
+}
+
+.directions .section-title::after {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+}
+
+.directions__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.directions__card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  transition: var(--transition-normal);
+  color: var(--text-primary);
+  box-shadow: var(--shadow);
+}
+
+.directions__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-color);
+}
+
+.directions__icon {
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.directions__icon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(26, 54, 93, 0.15));
+}
+
+.directions__icon-emoji {
+  font-size: var(--font-size-4xl);
+}
+
+.directions__title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.directions__description {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-secondary);
+}
+
+.directions__details {
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.directions__detail {
+  margin-bottom: var(--spacing-xs);
+}
+
+.directions__detail:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .directions__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .directions__card {
+    padding: var(--spacing-xl);
+  }
+
+  .directions__title {
+    font-size: var(--font-size-xl);
+  }
+}

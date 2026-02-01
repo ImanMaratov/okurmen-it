@@ -1,0 +1,112 @@
+/* About Section - Light background */
+.about {
+  background-color: var(--white);
+  color: var(--text-primary);
+}
+
+.about .section-title {
+  color: var(--text-primary);
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.about__text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about .section-title::after {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+}
+
+.about__description {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-2xl);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.about__features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.about__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  transition: var(--transition-normal);
+  width: 100%;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.about__feature:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-color);
+}
+
+.about__feature-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm);
+}
+
+.about__feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about__feature-title {
+  font-size: var(--font-size-xl);
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about__feature-desc {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about__content {
+    gap: var(--spacing-2xl);
+  }
+
+  .about__description {
+    font-size: var(--font-size-base);
+  }
+
+  .about__features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__feature {
+    padding: var(--spacing-lg);
+  }
+}

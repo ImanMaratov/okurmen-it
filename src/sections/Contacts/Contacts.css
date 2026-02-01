@@ -1,0 +1,113 @@
+/* Contacts - Light section */
+.contacts {
+  position: relative;
+}
+
+.contacts .section-title {
+  color: var(--text-primary);
+}
+
+.contacts .section-title::after {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+}
+
+.contacts__content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.contacts__info {
+  color: var(--text-primary);
+}
+
+.contacts__title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-xl);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.contacts__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.contacts__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  background: var(--gray-100);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: var(--transition-normal);
+}
+
+.contacts__detail:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent-color);
+}
+
+.contacts__detail-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.contacts__detail-text {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contacts__map {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  height: 400px;
+  background: var(--gray-100);
+  border: 1px solid var(--border-color);
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contacts__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .contacts__title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .contacts__detail {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contacts__map {
+    height: 300px;
+  }
+}

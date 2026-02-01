@@ -1,0 +1,69 @@
+:root {
+  /* Brand Colors */
+  --primary-color: #1a365d;
+  --primary-light: #2c5282;
+  --primary-dark: #0f2744;
+  --accent-color: #d69e2e;
+  --accent-light: #e5b84d;
+  --accent-dark: #b8861b;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --light-gray: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e0;
+  --dark-gray: #4a5568;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-color: #e2e8f0;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(26, 54, 93, 0.08);
+  --shadow: 0 4px 6px -1px rgba(26, 54, 93, 0.1), 0 2px 4px -2px rgba(26, 54, 93, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(26, 54, 93, 0.1), 0 4px 6px -4px rgba(26, 54, 93, 0.1);
+  --shadow-hover: 0 20px 25px -5px rgba(26, 54, 93, 0.15), 0 8px 10px -6px rgba(26, 54, 93, 0.1);
+  --shadow-xl: 0 25px 50px -12px rgba(26, 54, 93, 0.25);
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}

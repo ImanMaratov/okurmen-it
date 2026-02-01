@@ -1,0 +1,31 @@
+/* Footer - Brand primary */
+.footer {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  padding: var(--spacing-xl) 0;
+  margin-top: 0;
+  border-top: 3px solid var(--accent-color);
+}
+
+.footer__bottom {
+  text-align: center;
+  padding: var(--spacing-md) 0;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .footer__copyright {
+    font-size: var(--font-size-xs);
+  }
+}
