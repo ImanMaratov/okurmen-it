@@ -1,4 +1,5 @@
-/* Header - Fixed navigation */
+/* ================= HEADER ================= */
+
 .header {
   position: fixed;
   top: 0;
@@ -11,22 +12,34 @@
   border-bottom: 1px solid var(--border-color);
 }
 
+/* 🔥 ГЛАВНОЕ ИСПРАВЛЕНИЕ */
 .header__wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
+  gap: 28px;                 
+  padding: 0 var(--spacing-md);
+  margin-left: -40px;
 }
+
+/* ================= LOGO ================= */
 
 .header__logo {
   cursor: pointer;
   display: flex;
   align-items: center;
-  transition: var(--transition-fast);
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
 }
 
 .header__logo:hover {
   opacity: 0.9;
+}
+
+.header__logo-image {
+  height: 40px;
+  width: auto;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
 }
 
 .header__logo-text {
@@ -34,16 +47,21 @@
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: -0.02em;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .header__logo-text .text-accent {
   color: var(--accent-color);
 }
 
+/* ================= DESKTOP NAV ================= */
+
 .header__nav-list {
   display: flex;
-  gap: var(--spacing-xs);
   align-items: center;
+  gap: var(--spacing-xs);
+  margin-left: auto;
 }
 
 .header__nav-item {
@@ -66,7 +84,10 @@
   background-color: var(--gray-100);
 }
 
+/* ================= ACTION BUTTONS ================= */
+
 .header__lang-btn {
+  margin-left: var(--spacing-sm);
   font-weight: 500;
   font-size: var(--font-size-sm);
   color: var(--text-primary);
@@ -74,7 +95,6 @@
   border-radius: var(--radius-md);
   transition: var(--transition-fast);
   cursor: pointer;
-  white-space: nowrap;
   background-color: var(--gray-100);
   border: 1px solid var(--border-color);
 }
@@ -86,6 +106,7 @@
 }
 
 .header__signup-btn {
+  margin-left: var(--spacing-sm);
   font-weight: 600;
   font-size: var(--font-size-sm);
   color: var(--white);
@@ -93,63 +114,77 @@
   border-radius: var(--radius-md);
   transition: var(--transition-fast);
   cursor: pointer;
-  white-space: nowrap;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
   border: none;
   box-shadow: var(--shadow-sm);
 }
 
 .header__signup-btn:hover {
-  background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
   transform: translateY(-1px);
   box-shadow: var(--shadow);
 }
 
+/* ================= BURGER BUTTON (ИСПРАВЛЕН, X РОВНЫЙ) ================= */
+
 .header__menu-btn {
   display: none;
-  flex-direction: column;
-  justify-content: space-around;
+  margin-left: auto;
+  position: relative;
   width: 32px;
   height: 32px;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: var(--spacing-xs);
+  padding: 6px;
   border-radius: var(--radius-sm);
-  transition: var(--transition-fast);
 }
 
 .header__menu-btn:hover {
   background-color: var(--gray-100);
 }
 
-.header__menu-btn:focus {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
-}
-
 .header__menu-icon {
-  width: 100%;
+  position: absolute;
+  left: 6px;
+  right: 6px;
   height: 3px;
   background: var(--primary-color);
   border-radius: var(--radius-full);
-  transition: var(--transition-normal);
-  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-.header__menu-btn--open .header__menu-icon:first-child {
-  transform: rotate(45deg) translate(6px, 6px);
+/* положение линий */
+.header__menu-icon:nth-child(1) {
+  top: 9px;
+}
+
+.header__menu-icon:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__menu-icon:nth-child(3) {
+  bottom: 9px;
+}
+
+/* OPEN → PERFECT X */
+.header__menu-btn--open .header__menu-icon:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .header__menu-btn--open .header__menu-icon:nth-child(2) {
   opacity: 0;
 }
 
-.header__menu-btn--open .header__menu-icon:last-child {
-  transform: rotate(-45deg) translate(6px, -6px);
+.header__menu-btn--open .header__menu-icon:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
-/* Mobile navigation */
+/* ================= MOBILE NAV ================= */
+
 .header__mobile-nav {
   position: absolute;
   top: 100%;
@@ -159,7 +194,7 @@
   box-shadow: var(--shadow-md);
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-normal);
+  transition: max-height 0.3s ease;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -170,8 +205,8 @@
 .header__mobile-nav-list {
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-lg);
-  gap: var(--spacing-xs);
+  padding: 12px;
+  gap: 6px;
 }
 
 .header__mobile-nav-item {
@@ -180,13 +215,11 @@
 
 .header__mobile-nav-link {
   display: block;
-  padding: var(--spacing-md);
+  padding: 10px 12px;
   font-weight: 500;
   color: var(--text-primary);
   border-radius: var(--radius-md);
   transition: var(--transition-fast);
-  text-align: left;
-  cursor: pointer;
 }
 
 .header__mobile-nav-link:hover {
@@ -196,47 +229,45 @@
 
 .header__mobile-nav-lang {
   display: block;
-  padding: var(--spacing-md);
+  padding: 10px 12px;
   font-weight: 500;
   color: var(--text-primary);
   border-radius: var(--radius-md);
-  transition: var(--transition-fast);
-  text-align: left;
-  cursor: pointer;
   background-color: var(--gray-100);
   border: 1px solid var(--border-color);
 }
 
-.header__mobile-nav-lang:hover {
-  color: var(--accent-color);
-  background-color: var(--white);
-}
-
 .header__mobile-nav-signup {
   display: block;
-  padding: var(--spacing-md);
+  padding: 10px 12px;
   font-weight: 600;
   color: var(--white);
   border-radius: var(--radius-md);
-  transition: var(--transition-fast);
-  text-align: center;
-  cursor: pointer;
   background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
   border: none;
+  text-align: center;
 }
 
-.header__mobile-nav-signup:hover {
-  background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
-}
+/* ================= MEDIA ================= */
 
-/* Responsive */
 @media (max-width: 768px) {
   .header__menu-btn {
-    display: flex;
+    display: block;
+  }
+
+  .header__nav-list,
+  .header__lang-btn,
+  .header__signup-btn {
+    display: none;
   }
 
   .header__logo-text {
     font-size: var(--font-size-lg);
+  }
+
+  .header__logo-image {
+    height: 32px;
+    margin-left: 15px;
   }
 }
 

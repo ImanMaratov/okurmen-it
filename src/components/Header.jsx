@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import Container from './Container';
 import Button from './Button';
+import okurmenLogo from '../assets/images/okurmen.jpg';
 import './Header.css';
 
 const Header = () => {
@@ -30,6 +31,7 @@ const Header = () => {
       <Container>
         <div className="header__wrapper">
           <div className="header__logo" onClick={() => scrollToSection('hero')}>
+            <img src={okurmenLogo} alt="Okurmen Logo" className="header__logo-image" />
             <h2 className="header__logo-text">Okurmen<span className="text-accent">IT</span></h2>
           </div>
           

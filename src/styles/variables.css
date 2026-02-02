@@ -3,9 +3,9 @@
   --primary-color: #1a365d;
   --primary-light: #2c5282;
   --primary-dark: #0f2744;
-  --accent-color: #d69e2e;
-  --accent-light: #e5b84d;
-  --accent-dark: #b8861b;
+  --accent-color: rgb(246, 123, 0);
+  --accent-light: rgb(255, 155, 40);
+  --accent-dark: rgb(210, 100, 0);
 
   /* Neutrals */
   --white: #ffffff;
